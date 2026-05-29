@@ -1,4 +1,17 @@
 import streamlit as st
+
+# ---- PASSWORD SET ----
+PASSWORD = "1234"
+
+st.title("🚀 Treasury Dashboard")
+
+# ---- LOGIN CHECK ----
+user_pass = st.text_input("Enter Password", type="password")
+
+if user_pass != PASSWORD:
+    st.warning("Please enter correct password")
+    st.stop()
+import streamlit as st
 import requests
 import pandas as pd
 import plotly.express as px
